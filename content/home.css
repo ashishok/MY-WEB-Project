@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all .4s ease;
+}
+
+.sidebar header {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #0c3346;
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 21px;
+    color: white;
+    padding-left: 45px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    /* 1px for thickness */
+    transition: .3s;
+}
+
+ul li:hover a {
+    background-color: brown;
+    padding-left: 60px;
+}
+
+/* .sidebar ul a i{
+    margin-right: 20px;
+} */
+
+#check {
+    display: none;
+}
+
+label #btn,
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 4px;
+}
+
+label #btn {
+    left: 50px;
+    top: 35px;
+    font-size: 40px;
+    color: white;
+    padding: 0px 7px 1px 7px;
+    transition: all .5s;
+    /* try this by putting on line 83 */
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -202px;
+    top: 22px;
+    font-size: 22px;
+    color: #0a5275;
+    padding: 0px 4px 3px 4px;
+    transition: all .3s ease;
+}
+
+#cancel:hover {
+    background-color: brown;
+    transition: all .3s ease;
+}
+
+#check:checked~.sidebar {
+    left: 0px;
+}
+
+#check:checked~label #btn {
+    left: 250px;
+    opacity: 0%;
+    pointer-events: none;
+
+}
+
+#check:checked~label #cancel {
+    left: 202px;
+}
+
+#check:checked~section {
+    margin-left: 250px;
+}
+
+section {
+    background: url("2.jpg") no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 100vh;
+    transition: all .4s ease;
+    /* z-index: 2; */
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 3px 3px 3px #1c5572;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+@keyframes mymove {
+    from {right: 30px;}
+    to {right: 70px;}     
+  }
+
+img.sticky {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    width: 100px;
+    padding: 4px;
+    border: 3px solid rgb(35, 65, 165);
+    background-size: 10% 10%;
+    border-radius: 50%;
+    box-shadow: 9px 0px 10px rgba(0, 0, 0, .9), -9px 0px 10px rgba(0, 0, 0, .9);
+    animation: mymove 1s infinite alternate-reverse linear;
+}
+
+
+h4 {
+    margin-top: 4%;
+    margin-left: 70px;
+    /* margin-bottom: 0%; */
+    display: inline-block;
+    font-size: 23px;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    text-shadow: 2px 2px 3px red;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    border-left: 2px solid rgba(0, 0, 0, 0.3);
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+    /* cursor: pointer; */
+    color: #fff;
+    box-shadow: 9px 0px 10px rgba(0, 0, 0, 1), -9px 0px 10px rgba(0, 0, 0, 1);
+    border-radius: 15%;
+
+    background: linear-gradient(to left, #062736 50%, #1c5572 60%) right;
+    background-size: 213%;
+    transition: .5s ease-out;
+}
+h4:hover {
+    background-position: left;
+}
+
+
+.project {
+    margin-left: 70px;
+    margin-top: 4%;
+    display: inline-block;
+    font-size: 23px;
+    padding: 20px 20px 20px 20px;
+    top: 90%;
+    text-shadow: 2px 2px 3px red;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    border-left: 2px solid rgba(0, 0, 0, 0.3);
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+    /* cursor: pointer; */
+    color: #fff;
+    box-shadow: 9px 0px 10px rgba(0, 0, 0, 1), -9px 0px 10px rgba(0, 0, 0, 1);
+    border-radius: 15%;
+    background: linear-gradient(to left, #062736 50%, #1c5572 60%) right;
+    background-size: 213%;
+    transition: .5s ease-out;
+
+}
+.project:hover {
+    background-position: left;
+}
+
+.game {
+    margin-left: 70px;
+    margin-top: 4%;
+    display: inline-block;
+    font-size: 23px;
+    padding: 20px 20px 20px 20px;
+    top: 90%;
+    text-shadow: 2px 2px 3px red;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    border-left: 2px solid rgba(0, 0, 0, 0.3);
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+    /* cursor: pointer; */
+    color: #fff;
+    box-shadow: 9px 0px 10px rgba(0, 0, 0, 1), -9px 0px 10px rgba(0, 0, 0, 1);
+    border-radius: 15%;
+    background: linear-gradient(to left, #062736 50%, #1c5572 60%) right;
+    background-size: 213%;
+    transition: .5s ease-out;
+
+}
+.game:hover {
+    background-position: left;
+}
+
+.notes {
+    margin-left: 70px;
+    margin-top: 4%;
+    display: inline-block;
+    font-size: 23px;
+    padding: 20px 20px 20px 20px;
+    top: 90%;
+    text-shadow: 2px 2px 3px red;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    border-left: 2px solid rgba(0, 0, 0, 0.3);
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+    /* cursor: pointer; */
+    color: #fff;
+    box-shadow: 9px 0px 10px rgba(0, 0, 0, 1), -9px 0px 10px rgba(0, 0, 0, 1);
+    border-radius: 15%;
+    background: linear-gradient(to left, #062736 50%, #1c5572 60%) right;
+    background-size: 213%;
+    transition: .5s ease-out;
+
+}
+.notes:hover {
+    background-position: left;
+}
+
+.certi {
+    margin-left: 70px;
+    margin-top: 35.1%;
+    display: inline-block;
+    font-size: 23px;
+    padding: 20px 20px 20px 20px;
+    text-shadow: 2px 2px 3px red;
+    /* top: 90%; */
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    border-left: 2px solid rgba(0, 0, 0, 0.3);
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+    /* cursor: pointer; */
+    color: #fff;
+    box-shadow: 9px 0px 10px rgba(0, 0, 0, 1), -9px 0px 10px rgba(0, 0, 0, 1);
+    border-radius: 15%;
+    background: linear-gradient(to left, #062736 50%, #1c5572 60%) right;
+    background-size: 213%;
+    transition: .5s ease-out;
+
+}
+.certi:hover {
+    background-position: left;
+}
+
+
+.hidden{
+    position: absolute;
+    display: none;
+    background-color:#adc2ad;
+    margin-top: 100px;
+    margin-left: 68%;
+    right: .6%;
+    padding: 1.5% 1% 1.5% 1.5%;  
+    border-radius: 30px;
+
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    border-left: 2px solid rgba(0, 0, 0, 0.3);
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 9px 0px 10px rgba(0, 0, 0, 1), -9px 0px 10px rgba(0, 0, 0, 1);
+    text-shadow: 0px 0px .9px #1c5572;
+}
+.sticky:hover + .hidden{
+    display:block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0, 0, 0);   
+}
+
